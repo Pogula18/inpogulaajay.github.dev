@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pogula Studio</title>
+        <link rel="stylesheet" href="./Menu.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+    <!-- navbar link-->
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a> </li>
+                <li><a href="#about">About Company</a> </li>
+                <li><a href="#studio">Studio</a> </li>
+                <li><a href="#contactus">Contact Us</a> </li>
+            </ul>
+        </nav>
+        <section id="home">
+            <div class="main">
+                <h1 class="headings"> I am <br> POGULA  AJAY</h1>
+                <button class="btn">Hire Me</button>
+            </div>
+        </section>
+        <section id="about">
+            <h2 class="headings">ABOUT COMPANY</h2>
+            <div id="pic">  
+            <img src="./img/IMG_1674.JPG" alt="">
+            <div id="intro">
+                <h2> POGULA AJAY</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam quis eum suscipit ea labore hic molestiae, eligendi quidem qui rerum dolorum quasi at maxime omnis possimus sit voluptas fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. A officiis aliquid quasi officia temporibus dolor? Natus tempora dolorem praesentium minima, amet odit ipsam repudiandae provident ipsa, et quam vitae nesciunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, accusamus? Minus asperiores earum magni natus, exercitationem eos necessitatibus tempore porro dolorem facilis ea explicabo voluptas quibusdam amet dolores perspiciatis dignissimos. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa asperiores, fugit officia error id delectus esse. Veniam veritatis debitis aperiam totam nihil impedit qui praesentium incidunt sit aliquam, libero id! Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, impedit culpa ducimus a quos et id, quia dicta debitis optio aliquam minima nemo recusandae iure. Corporis at recusandae blanditiis ab?</p><br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ipsa molestiae deleniti architecto nesciunt tenetur, eveniet totam illo, temporibus itaque reiciendis nemo cupiditate saepe consectetur, rem pariatur ad suscipit deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo deserunt doloremque tempora? Omnis ducimus, id soluta atque cumque ut consectetur harum incidunt, iusto labore excepturi reprehenderit amet aliquid dignissimos quisquam.</p>
+
+                
+            </div>
+           </div>
+        </section>
+        <section id="studio">
+            <h1 class="headings">Studio</h1>
+            <div class="gallery">
+                <img src="./img/IMG_3088.JPG" alt="">
+                <img src="./img/IMG_1679.JPG" alt="">
+                <img src="./img/IMG_1772.JPG" alt="">
+                <img src="./img/IMG_2583.JPG" alt="">
+                <img src="./img/IMG_2100.JPG" alt="">
+                <img src="./img/IMG_2386.JPG" alt="">
+            </div>
+        </section>
+        <section id="contactus">
+            <div class="contact">
+                <form onsubmit="sendEmail(); rest(); return false;">
+                    <h2>Contact us</h2>
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Email id" required>
+                    <input type="text" id="phone" placeholder="Phone number"required>
+                    <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+                    <button class="btn" type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+        <!--Footer section-->
+        <section class="footer">
+            <div class="social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-snapchat"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+            </ul>
+            <ul>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <ul>
+                <li><a href="#service">service</a></li>
+            </ul>
+            <ul>
+                <li><a href="#terms">Terms</a></li>
+            </ul>
+            <ul>
+                <li><a href="#privacypolicy">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Pogula Ajay Coders @ 2022</p>
+        </section>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function sendEmail(){
+                Email.send({
+                  Host : "smtp.gmail.com",
+                  Username : "Pogulaajay18@gmail.com",
+                  Password : "Pogula_18ajay",
+                  To : 'Pogulaajay18@gmail.com',
+                  From : document.getElementById("email").value,
+                  Subject : "New Contact Form Enquiry",
+                  Body : "Name:" + document.getElementById("name").value + "<br> Email:" + document.getElementById("email").value + "<br> Phone number:" + document.getElementById("phone").value + "<br> Message:" + document.getElementById("message").value
+                  }).then(
+                  message => alert("Message sent Success")
+                  );
+            }
+        </script>
+    </body>
+</html>
